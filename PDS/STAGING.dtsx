@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="STAGING"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{AE4BB328-D9A1-4F62-88FB-76D35B8F86D4}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{B88BAF8E-2EC8-4D68-A610-01AEA93B1A10}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\abtk\OneDrive - NORRIQ\Desktop\Studies\PDS\EmployeeEducation.csv">
+          DTS:ConnectionString="C:\Users\abtk\source\repos\PDS\SourceFiles\EmployeeEducation.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="emp no"
-              DTS:DTSID="{7E7CEDF8-39AF-4DF7-AEA2-80EEAA0D6700}"
+              DTS:DTSID="{221E45FE-A9C0-482C-B96F-8743F0BFDD92}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,22 +48,10 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Education Field"
-              DTS:DTSID="{69059228-7D87-4AA2-8207-F4C5089BF368}"
+              DTS:DTSID="{D211B25D-A3D5-414B-ACBF-95E4BF954F63}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{B71768B5-F414-4DA8-B87D-AF623589A54E}"
-      DTS:ObjectName="Excel Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\abtk\OneDrive - NORRIQ\Desktop\Studies\PDS\Survey.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -104,7 +92,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\abtk\OneDrive - NORRIQ\Desktop\Studies\PDS\EmployeeSalary.csv">
+          DTS:ConnectionString="C:\Users\abtk\source\repos\PDS\SourceFiles\EmployeeSalary.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -113,7 +101,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="emp no"
-              DTS:DTSID="{8FCE1D26-ED54-4743-B3E0-2D0258EA7AC9}"
+              DTS:DTSID="{920FB886-E1F3-4B89-A775-042D5C9A4C2F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -122,7 +110,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Full Name"
-              DTS:DTSID="{B18310C0-2025-4ABA-A36E-BB7F8A40089C}"
+              DTS:DTSID="{37144625-7B31-4396-BC39-8FAD4168A5C7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -131,7 +119,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Net Hourly Rate"
-              DTS:DTSID="{3E2A575F-0B1F-42C1-8A1D-4BF74B28ACDF}"
+              DTS:DTSID="{5047EF55-8008-4011-BF1E-D38095CDB863}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -140,7 +128,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Gorss Monthly Rate"
-              DTS:DTSID="{B53CC9C1-490F-409B-8EBC-27F150906F59}"
+              DTS:DTSID="{AA71C342-E38A-41E6-A08E-1AAD8DD3DAE6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -149,10 +137,22 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Percent Salary Hike"
-              DTS:DTSID="{F0EB266E-0368-4409-BC53-A02A1A5AF64F}"
+              DTS:DTSID="{9E14E166-F3B0-4214-B925-1A91C945A7F9}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SurveyExcel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{B71768B5-F414-4DA8-B87D-AF623589A54E}"
+      DTS:ObjectName="SurveyExcel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\abtk\source\repos\PDS\SourceFiles\Survey.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -215,8 +215,8 @@
               <connections>
                 <connection
                   refId="Package\Load Staging Attrition Survey\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[SurveyExcel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SurveyExcel]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1411,6 +1411,12 @@
                       cachedName="jobRoleID"
                       externalMetadataColumnId="Package\Load Staging Employee\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobRoleID]"
                       lineageId="Package\Load Staging Employee\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobRoleID]" />
+                    <inputColumn
+                      refId="Package\Load Staging Employee\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[birthday]"
+                      cachedDataType="dbDate"
+                      cachedName="birthday"
+                      externalMetadataColumnId="Package\Load Staging Employee\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birthday]"
+                      lineageId="Package\Load Staging Employee\OLE DB Source.Outputs[OLE DB Source Output].Columns[birthday]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1462,6 +1468,10 @@
                       refId="Package\Load Staging Employee\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobRoleID]"
                       dataType="i4"
                       name="jobRoleID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Staging Employee\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birthday]"
+                      dataType="dbDate"
+                      name="birthday" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1654,6 +1664,15 @@
                       lineageId="Package\Load Staging Employee\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobRoleID]"
                       name="jobRoleID"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Staging Employee\OLE DB Source.Outputs[OLE DB Source Output].Columns[birthday]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Staging Employee\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[birthday]"
+                      lineageId="Package\Load Staging Employee\OLE DB Source.Outputs[OLE DB Source Output].Columns[birthday]"
+                      name="birthday"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1705,6 +1724,10 @@
                       refId="Package\Load Staging Employee\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobRoleID]"
                       dataType="i4"
                       name="jobRoleID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Staging Employee\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[birthday]"
+                      dataType="dbDate"
+                      name="birthday" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1771,6 +1794,11 @@
                       dataType="i4"
                       lineageId="Package\Load Staging Employee\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobRoleID]"
                       name="jobRoleID" />
+                    <outputColumn
+                      refId="Package\Load Staging Employee\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[birthday]"
+                      dataType="dbDate"
+                      lineageId="Package\Load Staging Employee\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[birthday]"
+                      name="birthday" />
                     <outputColumn
                       refId="Package\Load Staging Employee\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -2133,8 +2161,8 @@
               <connections>
                 <connection
                   refId="Package\Load Staging Performance Survey\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[SurveyExcel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SurveyExcel]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2853,8 +2881,8 @@
               <connections>
                 <connection
                   refId="Package\Load Staging Satisfaction Survey\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[SurveyExcel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SurveyExcel]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3206,8 +3234,8 @@
               <connections>
                 <connection
                   refId="Package\Load Staging Situation Survey\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[SurveyExcel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SurveyExcel]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3299,6 +3327,33 @@
                       lineageId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].Columns[Years With Curr Manager]"
                       name="Years With Curr Manager"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].Columns[Active]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].ExternalColumns[Active]"
+                      lineageId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].Columns[Active]"
+                      name="Active"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].Columns[Recrutement Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].ExternalColumns[Recrutement Date]"
+                      lineageId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].Columns[Recrutement Date]"
+                      name="Recrutement Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].Columns[Exit Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].ExternalColumns[Exit Date]"
+                      lineageId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].Columns[Exit Date]"
+                      name="Exit Date"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3340,6 +3395,18 @@
                       refId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].ExternalColumns[Years With Curr Manager]"
                       dataType="r8"
                       name="Years With Curr Manager" />
+                    <externalMetadataColumn
+                      refId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].ExternalColumns[Active]"
+                      dataType="r8"
+                      name="Active" />
+                    <externalMetadataColumn
+                      refId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].ExternalColumns[Recrutement Date]"
+                      dataType="date"
+                      name="Recrutement Date" />
+                    <externalMetadataColumn
+                      refId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].ExternalColumns[Exit Date]"
+                      dataType="date"
+                      name="Exit Date" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -3394,6 +3461,21 @@
                       dataType="r8"
                       lineageId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Error Output].Columns[Years With Curr Manager]"
                       name="Years With Curr Manager" />
+                    <outputColumn
+                      refId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Error Output].Columns[Active]"
+                      dataType="r8"
+                      lineageId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Error Output].Columns[Active]"
+                      name="Active" />
+                    <outputColumn
+                      refId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Error Output].Columns[Recrutement Date]"
+                      dataType="date"
+                      lineageId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Error Output].Columns[Recrutement Date]"
+                      name="Recrutement Date" />
+                    <outputColumn
+                      refId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Error Output].Columns[Exit Date]"
+                      dataType="date"
+                      lineageId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Error Output].Columns[Exit Date]"
+                      name="Exit Date" />
                     <outputColumn
                       refId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -3539,6 +3621,24 @@
                       cachedName="Years With Curr Manager"
                       externalMetadataColumnId="Package\Load Staging Situation Survey\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yearsCurrManager]"
                       lineageId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].Columns[Years With Curr Manager]" />
+                    <inputColumn
+                      refId="Package\Load Staging Situation Survey\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Recrutement Date]"
+                      cachedDataType="date"
+                      cachedName="Recrutement Date"
+                      externalMetadataColumnId="Package\Load Staging Situation Survey\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[recrutmentDate]"
+                      lineageId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].Columns[Recrutement Date]" />
+                    <inputColumn
+                      refId="Package\Load Staging Situation Survey\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Exit Date]"
+                      cachedDataType="date"
+                      cachedName="Exit Date"
+                      externalMetadataColumnId="Package\Load Staging Situation Survey\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[exitDate]"
+                      lineageId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].Columns[Exit Date]" />
+                    <inputColumn
+                      refId="Package\Load Staging Situation Survey\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Active]"
+                      cachedDataType="r8"
+                      cachedName="Active"
+                      externalMetadataColumnId="Package\Load Staging Situation Survey\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[active]"
+                      lineageId="Package\Load Staging Situation Survey\Excel Source.Outputs[Excel Source Output].Columns[Active]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3580,6 +3680,18 @@
                       refId="Package\Load Staging Situation Survey\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yearsCurrManager]"
                       dataType="i4"
                       name="yearsCurrManager" />
+                    <externalMetadataColumn
+                      refId="Package\Load Staging Situation Survey\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[recrutmentDate]"
+                      dataType="dbDate"
+                      name="recrutmentDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load Staging Situation Survey\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[exitDate]"
+                      dataType="dbDate"
+                      name="exitDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load Staging Situation Survey\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[active]"
+                      dataType="ui1"
+                      name="active" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3633,48 +3745,126 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="199,42"
+          Size="216,42"
+          Id="Package\Load Staging Attrition Survey"
+          TopLeft="411,550" />
+        <NodeLayout
+          Size="198.666666666667,42"
           Id="Package\Load Staging Department"
-          TopLeft="76,83" />
+          TopLeft="405,84" />
         <NodeLayout
           Size="190,42"
           Id="Package\Load Staging Education"
-          TopLeft="72,162" />
+          TopLeft="411,161" />
         <NodeLayout
-          Size="215,42"
+          Size="214.666666666667,42"
           Id="Package\Load Staging Education Field"
-          TopLeft="63,339" />
+          TopLeft="403,398" />
         <NodeLayout
-          Size="189,42"
+          Size="189.333333333334,42"
           Id="Package\Load Staging Employee"
-          TopLeft="59,281" />
+          TopLeft="417,318" />
         <NodeLayout
           Size="180,42"
           Id="Package\Load Staging JobRole"
-          TopLeft="81,224" />
-        <NodeLayout
-          Size="180,42"
-          Id="Package\Load Staging Salaries"
-          TopLeft="58,385" />
-        <NodeLayout
-          Size="216,42"
-          Id="Package\Load Staging Attrition Survey"
-          TopLeft="81,449" />
-        <NodeLayout
-          Size="220,42"
-          Id="Package\Load Staging Situation Survey"
-          TopLeft="93,522" />
-        <NodeLayout
-          Size="233,42"
-          Id="Package\Load Staging Satisfaction Survey"
-          TopLeft="83,573" />
+          TopLeft="422,239" />
         <NodeLayout
           Size="238,42"
           Id="Package\Load Staging Performance Survey"
-          TopLeft="103,633" />
+          TopLeft="406,777" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Load Staging Salaries"
+          TopLeft="433,474" />
+        <NodeLayout
+          Size="233.333333333334,42"
+          Id="Package\Load Staging Satisfaction Survey"
+          TopLeft="413,693" />
+        <NodeLayout
+          Size="220,42"
+          Id="Package\Load Staging Situation Survey"
+          TopLeft="421,630" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Load Staging Attrition Survey">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="138.666666666667,42"
+          Id="Package\Load Staging Attrition Survey\Excel Source"
+          TopLeft="111,96" />
+        <NodeLayout
+          Size="170.666666666667,42"
+          Id="Package\Load Staging Attrition Survey\OLE DB Destination"
+          TopLeft="276,59" />
+        <EdgeLayout
+          Id="Package\Load Staging Attrition Survey.Paths[Excel Source Output]"
+          TopLeft="250,117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="26,-37"
+              Start="0,0"
+              End="18.5,-37">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="9,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="9,0"
+                    Point2="13,0"
+                    Point3="13,-4" />
+                  <mssgle:LineSegment
+                    End="13,-33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13,-33"
+                    Point2="13,-37"
+                    Point3="17,-37" />
+                  <mssgle:LineSegment
+                    End="18.5,-37" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Staging Attrition Survey\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Staging Attrition Survey\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Load Staging Department">
     <LayoutInfo>
@@ -3683,37 +3873,25 @@
         <NodeLayout
           Size="150,42"
           Id="Package\Load Staging Department\OLE DB Source"
-          TopLeft="55,65" />
+          TopLeft="55,47.4500003138185" />
         <NodeLayout
-          Size="171,42"
+          Size="170.666666666667,42"
           Id="Package\Load Staging Department\OLE DB Destination"
           TopLeft="269,46" />
         <EdgeLayout
           Id="Package\Load Staging Department.Paths[OLE DB Source Output]"
-          TopLeft="205,86">
+          TopLeft="205,67.7250001569092">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="64,-19"
+              EndConnector="64,0"
               Start="0,0"
-              End="56.5,-19">
+              End="56.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="28,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="28,0"
-                    Point2="32,0"
-                    Point3="32,-4" />
-                  <mssgle:LineSegment
-                    End="32,-15" />
-                  <mssgle:CubicBezierSegment
-                    Point1="32,-15"
-                    Point2="32,-19"
-                    Point3="36,-19" />
-                  <mssgle:LineSegment
-                    End="56.5,-19" />
+                    End="56.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3837,11 +4015,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171,42"
+          Size="170.666666666667,42"
           Id="Package\Load Staging Education Field\OLE DB Destination"
           TopLeft="281,58" />
         <NodeLayout
-          Size="151,42"
+          Size="150.666666666667,42"
           Id="Package\Load Staging Education Field\Flat File Source"
           TopLeft="83,74" />
         <EdgeLayout
@@ -3900,15 +4078,15 @@
     design-time-name="Package\Load Staging Employee">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170.666666666667,42"
+          Id="Package\Load Staging Employee\OLE DB Destination"
+          TopLeft="269,46" />
         <NodeLayout
           Size="150,42"
           Id="Package\Load Staging Employee\OLE DB Source"
           TopLeft="55,65" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load Staging Employee\OLE DB Destination"
-          TopLeft="269,46" />
         <EdgeLayout
           Id="Package\Load Staging Employee.Paths[OLE DB Source Output]"
           TopLeft="205,86">
@@ -3940,9 +4118,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3950,6 +4126,19 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Load Staging Employee\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Staging Employee\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4040,10 +4229,88 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\Load Staging Performance Survey">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load Staging Performance Survey\OLE DB Destination"
+          TopLeft="276,59" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Load Staging Performance Survey\Excel Source"
+          TopLeft="111,96" />
+        <EdgeLayout
+          Id="Package\Load Staging Performance Survey.Paths[Excel Source Output]"
+          TopLeft="250,117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="26,-37"
+              Start="0,0"
+              End="18.5,-37">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="9,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="9,0"
+                    Point2="13,0"
+                    Point3="13,-4" />
+                  <mssgle:LineSegment
+                    End="13,-33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13,-33"
+                    Point2="13,-37"
+                    Point3="17,-37" />
+                  <mssgle:LineSegment
+                    End="18.5,-37" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Staging Performance Survey\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Staging Performance Survey\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\Load Staging Salaries">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\Load Staging Salaries\OLE DB Destination"
@@ -4083,7 +4350,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4103,170 +4372,18 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Load Staging Attrition Survey">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load Staging Attrition Survey\OLE DB Destination"
-          TopLeft="276,59" />
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Load Staging Attrition Survey\Excel Source"
-          TopLeft="111,96" />
-        <EdgeLayout
-          Id="Package\Load Staging Attrition Survey.Paths[Excel Source Output]"
-          TopLeft="250,117">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="26,-37"
-              Start="0,0"
-              End="18.5,-37">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="9,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="9,0"
-                    Point2="13,0"
-                    Point3="13,-4" />
-                  <mssgle:LineSegment
-                    End="13,-33" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13,-33"
-                    Point2="13,-37"
-                    Point3="17,-37" />
-                  <mssgle:LineSegment
-                    End="18.5,-37" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Staging Attrition Survey\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Staging Attrition Survey\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Load Staging Situation Survey">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Load Staging Situation Survey\Excel Source"
-          TopLeft="111,96" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load Staging Situation Survey\OLE DB Destination"
-          TopLeft="276,59" />
-        <EdgeLayout
-          Id="Package\Load Staging Situation Survey.Paths[Excel Source Output]"
-          TopLeft="250,117">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="26,-37"
-              Start="0,0"
-              End="18.5,-37">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="9,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="9,0"
-                    Point2="13,0"
-                    Point3="13,-4" />
-                  <mssgle:LineSegment
-                    End="13,-33" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13,-33"
-                    Point2="13,-37"
-                    Point3="17,-37" />
-                  <mssgle:LineSegment
-                    End="18.5,-37" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Staging Situation Survey\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Staging Situation Survey\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\Load Staging Satisfaction Survey">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Load Staging Satisfaction Survey\Excel Source"
-          TopLeft="111,96" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\Load Staging Satisfaction Survey\OLE DB Destination"
           TopLeft="276,59" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Load Staging Satisfaction Survey\Excel Source"
+          TopLeft="111,96" />
         <EdgeLayout
           Id="Package\Load Staging Satisfaction Survey.Paths[Excel Source Output]"
           TopLeft="250,117">
@@ -4298,7 +4415,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4331,20 +4450,20 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Load Staging Performance Survey">
+    design-time-name="Package\Load Staging Situation Survey">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="139,42"
-          Id="Package\Load Staging Performance Survey\Excel Source"
-          TopLeft="111,96" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load Staging Performance Survey\OLE DB Destination"
+          Size="170.666666666667,42"
+          Id="Package\Load Staging Situation Survey\OLE DB Destination"
           TopLeft="276,59" />
+        <NodeLayout
+          Size="138.666666666667,42"
+          Id="Package\Load Staging Situation Survey\Excel Source"
+          TopLeft="111,96" />
         <EdgeLayout
-          Id="Package\Load Staging Performance Survey.Paths[Excel Source Output]"
+          Id="Package\Load Staging Situation Survey.Paths[Excel Source Output]"
           TopLeft="250,117">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4374,14 +4493,16 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Staging Performance Survey\Excel Source">
+    design-time-name="Package\Load Staging Situation Survey\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4394,7 +4515,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Staging Performance Survey\OLE DB Destination">
+    design-time-name="Package\Load Staging Situation Survey\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
