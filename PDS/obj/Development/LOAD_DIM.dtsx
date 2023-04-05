@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="LOAD_DIM"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{CFD28D2F-40E7-4A22-BE20-F75222832886}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{FDF6AE68-528E-4573-855C-651BEFE8C38B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1279,29 +1279,11 @@
                       externalMetadataColumnId="Package\Load Dim Emp Info\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[eligibleOverTime]"
                       lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[eligbleOvertime]" />
                     <inputColumn
-                      refId="Package\Load Dim Emp Info\Insert Destination.Inputs[OLE DB Destination Input].Columns[distanceFromHome]"
-                      cachedDataType="i4"
-                      cachedName="distanceFromHome"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[distanceFromHome]"
-                      lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[distanceFromHome]" />
-                    <inputColumn
                       refId="Package\Load Dim Emp Info\Insert Destination.Inputs[OLE DB Destination Input].Columns[active]"
                       cachedDataType="ui1"
                       cachedName="active"
                       externalMetadataColumnId="Package\Load Dim Emp Info\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[active]"
                       lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[active]" />
-                    <inputColumn
-                      refId="Package\Load Dim Emp Info\Insert Destination.Inputs[OLE DB Destination Input].Columns[numPreviousCompanies]"
-                      cachedDataType="i4"
-                      cachedName="numPreviousCompanies"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[numPreviousCompanies]"
-                      lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[numPreviousCompanies]" />
-                    <inputColumn
-                      refId="Package\Load Dim Emp Info\Insert Destination.Inputs[OLE DB Destination Input].Columns[birthday]"
-                      cachedDataType="dbDate"
-                      cachedName="birthday"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[birthday]"
-                      lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[birthday]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1333,21 +1315,9 @@
                       dataType="ui1"
                       name="eligibleOverTime" />
                     <externalMetadataColumn
-                      refId="Package\Load Dim Emp Info\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[distanceFromHome]"
-                      dataType="i4"
-                      name="distanceFromHome" />
-                    <externalMetadataColumn
                       refId="Package\Load Dim Emp Info\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[active]"
                       dataType="ui1"
                       name="active" />
-                    <externalMetadataColumn
-                      refId="Package\Load Dim Emp Info\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[numPreviousCompanies]"
-                      dataType="i4"
-                      name="numPreviousCompanies" />
-                    <externalMetadataColumn
-                      refId="Package\Load Dim Emp Info\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[birthday]"
-                      dataType="dbDate"
-                      name="birthday" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1394,7 +1364,7 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DIM_EmployeeInfo] SET [active] = ?,[birthday] = ?,[distanceFromHome] = ?,[eligibleOverTime] = ?,[fullName] = ?,[gender] = ?,[martialStatus] = ?,[numPreviousCompanies] = ? WHERE [id] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DIM_EmployeeInfo] SET [active] = ?,[eligibleOverTime] = ?,[fullName] = ?,[gender] = ?,[martialStatus] = ? WHERE [id] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1423,56 +1393,38 @@
                       externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[active]" />
                     <inputColumn
-                      refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].Columns[birthday]"
-                      cachedDataType="dbDate"
-                      cachedName="birthday"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[birthday]" />
-                    <inputColumn
-                      refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].Columns[distanceFromHome]"
-                      cachedDataType="i4"
-                      cachedName="distanceFromHome"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[distanceFromHome]" />
-                    <inputColumn
                       refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].Columns[eligbleOvertime]"
                       cachedDataType="ui1"
                       cachedName="eligbleOvertime"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[eligbleOvertime]" />
                     <inputColumn
                       refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].Columns[fullName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="fullName"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[fullName]" />
                     <inputColumn
                       refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].Columns[gender]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="gender"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[gender]" />
                     <inputColumn
                       refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].Columns[id]"
                       cachedDataType="i4"
                       cachedName="id"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
                       lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]" />
                     <inputColumn
                       refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].Columns[martialStatus]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="martialStatus"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
                       lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[martialStatus]" />
-                    <inputColumn
-                      refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].Columns[numPreviousCompanies]"
-                      cachedDataType="i4"
-                      cachedName="numPreviousCompanies"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[numPreviousCompanies]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1489,7 +1441,7 @@
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="dbDate"
+                      dataType="ui1"
                       name="Param_1">
                       <properties>
                         <property
@@ -1500,18 +1452,20 @@
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       name="Param_2">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
+                          name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      dataType="ui1"
+                      dataType="wstr"
+                      length="10"
                       name="Param_3">
                       <properties>
                         <property
@@ -1523,7 +1477,7 @@
                     <externalMetadataColumn
                       refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
                       dataType="wstr"
-                      length="50"
+                      length="10"
                       name="Param_4">
                       <properties>
                         <property
@@ -1534,43 +1488,8 @@
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      dataType="wstr"
-                      length="10"
+                      dataType="i4"
                       name="Param_5">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      dataType="wstr"
-                      length="10"
-                      name="Param_6">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      dataType="i4"
-                      name="Param_7">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Load Dim Emp Info\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
-                      dataType="i4"
-                      name="Param_8">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1631,7 +1550,7 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DIM_EmployeeInfo] SET [active] = ?,[eligibleOverTime] = ?,[martialStatus] = ?,[numPreviousCompanies] = ? WHERE [id] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DIM_EmployeeInfo] SET [active] = ?,[eligibleOverTime] = ?,[martialStatus] = ? WHERE [id] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1669,7 +1588,7 @@
                       refId="Package\Load Dim Emp Info\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[id]"
                       cachedDataType="i4"
                       cachedName="id"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]" />
                     <inputColumn
                       refId="Package\Load Dim Emp Info\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[martialStatus]"
@@ -1678,12 +1597,6 @@
                       cachedName="martialStatus"
                       externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[martialStatus]" />
-                    <inputColumn
-                      refId="Package\Load Dim Emp Info\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[numPreviousCompanies]"
-                      cachedDataType="i4"
-                      cachedName="numPreviousCompanies"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[numPreviousCompanies]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1725,17 +1638,6 @@
                       refId="Package\Load Dim Emp Info\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       dataType="i4"
                       name="Param_3">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Load Dim Emp Info\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      dataType="i4"
-                      name="Param_4">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2105,7 +2007,7 @@
                   dataType="System.String"
                   description="Specifies the SELECT statement used to create a schema rowset."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [active], [birthday], [distanceFromHome], [eligibleOverTime], [fullName], [gender], [id], [martialStatus], [numPreviousCompanies] FROM [dbo].[DIM_EmployeeInfo]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [active], [eligibleOverTime], [fullName], [gender], [id], [martialStatus] FROM [dbo].[DIM_EmployeeInfo]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
@@ -2164,32 +2066,6 @@
                           dataType="System.Int32"
                           name="ColumnType"
                           typeConverter="ColumnType">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Load Dim Emp Info\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[birthday]"
-                      cachedDataType="dbDate"
-                      cachedName="birthday"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[birthday]"
-                      lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[birthday]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">4</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Load Dim Emp Info\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[distanceFromHome]"
-                      cachedDataType="i4"
-                      cachedName="distanceFromHome"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[distanceFromHome]"
-                      lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[distanceFromHome]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">4</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2260,19 +2136,6 @@
                           typeConverter="ColumnType">2</property>
                       </properties>
                     </inputColumn>
-                    <inputColumn
-                      refId="Package\Load Dim Emp Info\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[numPreviousCompanies]"
-                      cachedDataType="i4"
-                      cachedName="numPreviousCompanies"
-                      externalMetadataColumnId="Package\Load Dim Emp Info\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[numPreviousCompanies]"
-                      lineageId="Package\Load Dim Emp Info\OLE DB Source.Outputs[OLE DB Source Output].Columns[numPreviousCompanies]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">2</property>
-                      </properties>
-                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2280,14 +2143,6 @@
                       refId="Package\Load Dim Emp Info\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[active]"
                       dataType="ui1"
                       name="active" />
-                    <externalMetadataColumn
-                      refId="Package\Load Dim Emp Info\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[birthday]"
-                      dataType="dbDate"
-                      name="birthday" />
-                    <externalMetadataColumn
-                      refId="Package\Load Dim Emp Info\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[distanceFromHome]"
-                      dataType="i4"
-                      name="distanceFromHome" />
                     <externalMetadataColumn
                       refId="Package\Load Dim Emp Info\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[eligibleOverTime]"
                       dataType="ui1"
@@ -2311,10 +2166,6 @@
                       dataType="wstr"
                       length="10"
                       name="martialStatus" />
-                    <externalMetadataColumn
-                      refId="Package\Load Dim Emp Info\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[numPreviousCompanies]"
-                      dataType="i4"
-                      name="numPreviousCompanies" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4252,11 +4103,11 @@ where [refTable].[empID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="151,43"
+          Size="150.666666666667,42.6666666666667"
           Id="Package\Load Dim Department\OLE DB Source"
           TopLeft="236.5,5.5" />
         <NodeLayout
-          Size="209,42"
+          Size="209.333333333334,42"
           Id="Package\Load Dim Department\Slowly Changing Dimension"
           TopLeft="207.5,108.5" />
         <NodeLayout
@@ -4264,7 +4115,7 @@ where [refTable].[empID] = ?</property>
           Id="Package\Load Dim Department\OLE DB Command"
           TopLeft="229,210.5" />
         <NodeLayout
-          Size="163,42"
+          Size="162.666666666667,42"
           Id="Package\Load Dim Department\Insert Destination"
           TopLeft="5.50000000000006,210.5" />
         <EdgeLayout
@@ -4286,9 +4137,7 @@ where [refTable].[empID] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4762,18 +4611,6 @@ where [refTable].[empID] = ?</property>
       &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[birthday]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;birthday&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[distanceFromHome]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;distanceFromHome&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[eligbleOvertime]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;eligibleOverTime&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
@@ -4800,12 +4637,6 @@ where [refTable].[empID] = ?</property>
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[martialStatus]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;martialStatus&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[numPreviousCompanies]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;numPreviousCompanies&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
       &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;

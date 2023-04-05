@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FACT"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{7624229B-F8C3-41AF-969B-1C345D8BE7AC}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{02C8A746-659B-4299-8566-E1C4BBA068A1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -44,13 +44,13 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\LOAD FACT_EMPLOYEE"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{848FB3A4-9C63-4531-9867-FFC1FAC16968}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="LOAD FACT_EMPLOYEE"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -58,7 +58,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -115,7 +115,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.DW_HR]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.DW_HR]"
                   description="The OLE DB runtime connection used to access the database."
@@ -123,217 +123,317 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[netHourlyRate]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[netHourlyRate]"
                       cachedDataType="numeric"
                       cachedName="netHourlyRate"
                       cachedPrecision="18"
                       cachedScale="3"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[netHourlyRate]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[netHourlyRate]" />
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[netHourlyRate]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[netHourlyRate]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[grossMonthlyRate]"
-                      cachedDataType="numeric"
-                      cachedName="grossMonthlyRate"
-                      cachedPrecision="18"
-                      cachedScale="3"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[grossMonthlyRate]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[grossMonthlyRate]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[percentSalaryHike]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[percentSalaryHike]"
                       cachedDataType="numeric"
                       cachedName="percentSalaryHike"
                       cachedPrecision="18"
                       cachedScale="3"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[percentSalaryHike]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[percentSalaryHike]" />
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[percentSalaryHike]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[percentSalaryHike]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pk_department]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pk_department]"
                       cachedDataType="i4"
                       cachedName="pk_department"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_department]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_department]" />
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_department]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_department]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pk_education]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pk_education]"
                       cachedDataType="i4"
                       cachedName="pk_education"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_education]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_education]" />
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_education]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_education]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pk_jobrole]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pk_jobrole]"
                       cachedDataType="i4"
                       cachedName="pk_jobrole"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_jobrole]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_jobrole]" />
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_jobrole]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_jobrole]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pk_situation]"
-                      cachedDataType="i4"
-                      cachedName="pk_situation"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_situation]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_situation]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[jobInvolvement]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[jobInvolvement]"
                       cachedDataType="i4"
                       cachedName="jobInvolvement"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobInvolvement]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobInvolvement]" />
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobInvolvement]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobInvolvement]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[jobLevel]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[jobLevel]"
                       cachedDataType="i4"
                       cachedName="jobLevel"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobLevel]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobLevel]" />
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobLevel]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobLevel]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[performanceRating]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[performanceRating]"
                       cachedDataType="i4"
                       cachedName="performanceRating"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[performanceRating]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[performanceRating]" />
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[performanceRating]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[performanceRating]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[environmentSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[environmentSatisfaction]"
                       cachedDataType="i4"
                       cachedName="environmentSatisfaction"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[environmentSatisfaction]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[environmentSatisfaction]" />
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[environmentSatisfaction]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[environmentSatisfaction]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[jobSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[jobSatisfaction]"
                       cachedDataType="i4"
                       cachedName="jobSatisfaction"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobSatisfaction]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobSatisfaction]" />
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobSatisfaction]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobSatisfaction]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[relationshipSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[relationshipSatisfaction]"
                       cachedDataType="i4"
                       cachedName="relationshipSatisfaction"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[relationshipSatisfaction]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[relationshipSatisfaction]" />
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[relationshipSatisfaction]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[relationshipSatisfaction]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[worklifeBalance]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[worklifeBalance]"
                       cachedDataType="i4"
                       cachedName="worklifeBalance"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[worklifeBalance]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[worklifeBalance]" />
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[worklifeBalance]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[worklifeBalance]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pk_employeeinfo]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pk_employeeinfo]"
                       cachedDataType="i4"
                       cachedName="pk_employeeinfo"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_empinfo]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_employeeinfo]" />
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_employeeinfo]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_employeeinfo]" />
+                    <inputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[grossMonthlyRate]"
+                      cachedDataType="numeric"
+                      cachedName="grossMonthlyRate"
+                      cachedPrecision="18"
+                      cachedScale="3"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GrossMonthlyRate]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[grossMonthlyRate]" />
+                    <inputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[distanceFromHome]"
+                      cachedDataType="i4"
+                      cachedName="distanceFromHome"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[distanceFromHome]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[distanceFromHome]" />
+                    <inputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[numPreviousCompanies]"
+                      cachedDataType="i4"
+                      cachedName="numPreviousCompanies"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[numPreviousCompanies]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[numPreviousCompanies]" />
+                    <inputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[birthdate]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="birthdate"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birthdate]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[birthdate]" />
+                    <inputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[trainingTimesLY]"
+                      cachedDataType="i4"
+                      cachedName="trainingTimesLY"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[trainingTimesLY]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[trainingTimesLY]" />
+                    <inputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[totalWorkingYears]"
+                      cachedDataType="i4"
+                      cachedName="totalWorkingYears"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[totalWorkingYears]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[totalWorkingYears]" />
+                    <inputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[yearsAtCompany]"
+                      cachedDataType="i4"
+                      cachedName="yearsAtCompany"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yearsAtCompany]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[yearsAtCompany]" />
+                    <inputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[yearsCurrentRole]"
+                      cachedDataType="i4"
+                      cachedName="yearsCurrentRole"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yearsCurrentRole]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[yearsCurrentRole]" />
+                    <inputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[yearsSinceLastPromotion]"
+                      cachedDataType="i4"
+                      cachedName="yearsSinceLastPromotion"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yearsSinceLastPromotion]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[yearsSinceLastPromotion]" />
+                    <inputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[yearsCurrManager]"
+                      cachedDataType="i4"
+                      cachedName="yearsCurrManager"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yearsCurrManager]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[yearsCurrManager]" />
+                    <inputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[recrutmentDate]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="recrutmentDate"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[recrutementDate]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[recrutmentDate]" />
+                    <inputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[exitDate]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="exitDate"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[exitDate]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[exitDate]" />
+                    <inputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pk_situation]"
+                      cachedDataType="i4"
+                      cachedName="pk_situation"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_situation]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_situation]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PK_factemp]"
-                      dataType="i4"
-                      name="PK_factemp" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_empinfo]"
-                      dataType="i4"
-                      name="pk_empinfo" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[emp_code]"
-                      dataType="wstr"
-                      length="30"
-                      name="emp_code" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_department]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_department]"
                       dataType="i4"
                       name="pk_department" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_education]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_education]"
                       dataType="i4"
                       name="pk_education" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_jobrole]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_jobrole]"
                       dataType="i4"
                       name="pk_jobrole" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_situation]"
-                      dataType="i4"
-                      name="pk_situation" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[netHourlyRate]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[netHourlyRate]"
                       dataType="numeric"
                       name="netHourlyRate"
                       precision="18"
                       scale="3" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[grossMonthlyRate]"
-                      dataType="numeric"
-                      name="grossMonthlyRate"
-                      precision="18"
-                      scale="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[percentSalaryHike]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[percentSalaryHike]"
                       dataType="numeric"
                       name="percentSalaryHike"
                       precision="18"
                       scale="3" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[environmentSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[environmentSatisfaction]"
                       dataType="i4"
                       name="environmentSatisfaction" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobSatisfaction]"
                       dataType="i4"
                       name="jobSatisfaction" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[relationshipSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[relationshipSatisfaction]"
                       dataType="i4"
                       name="relationshipSatisfaction" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[worklifeBalance]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[worklifeBalance]"
                       dataType="i4"
                       name="worklifeBalance" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[educationDescription]"
-                      dataType="wstr"
-                      length="50"
-                      name="educationDescription" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[attritionDescription]"
-                      dataType="wstr"
-                      length="50"
-                      name="attritionDescription" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobInvolvement]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobInvolvement]"
                       dataType="i4"
                       name="jobInvolvement" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobLevel]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobLevel]"
                       dataType="i4"
                       name="jobLevel" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[performanceRating]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[performanceRating]"
                       dataType="i4"
                       name="performanceRating" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_factEmployee]"
+                      dataType="i4"
+                      name="id_factEmployee" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_employeeinfo]"
+                      dataType="i4"
+                      name="pk_employeeinfo" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GrossMonthlyRate]"
+                      dataType="numeric"
+                      name="GrossMonthlyRate"
+                      precision="18"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[distanceFromHome]"
+                      dataType="numeric"
+                      name="distanceFromHome"
+                      precision="18"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[numPreviousCompanies]"
+                      dataType="i4"
+                      name="numPreviousCompanies" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birthdate]"
+                      dataType="i4"
+                      name="birthdate" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[trainingTimesLY]"
+                      dataType="i4"
+                      name="trainingTimesLY" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[totalWorkingYears]"
+                      dataType="i4"
+                      name="totalWorkingYears" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yearsAtCompany]"
+                      dataType="i4"
+                      name="yearsAtCompany" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yearsCurrentRole]"
+                      dataType="i4"
+                      name="yearsCurrentRole" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yearsSinceLastPromotion]"
+                      dataType="i4"
+                      name="yearsSinceLastPromotion" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yearsCurrManager]"
+                      dataType="i4"
+                      name="yearsCurrManager" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[recrutementDate]"
+                      dataType="i4"
+                      name="recrutementDate" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[exitDate]"
+                      dataType="i4"
+                      name="exitDate" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk_situation]"
+                      dataType="i4"
+                      name="pk_situation" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -342,7 +442,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Source"
+              refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -366,18 +466,18 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
-      [netHourlyRate]
-      ,[grossMonthlyRate]
-      ,[percentSalaryHike]
-	  ,pk_department	
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT pk_department	
 	  ,pk_education
 	  ,pk_employeeinfo
 	  ,pk_jobrole
 	  ,pk_situation
-	  ,b.[distanceFromHome]
-	  ,b.[numPreviousCompanies]
-	  ,CONVERT(nvarchar(10),b.birthday,112) as birthdate
+      ,[netHourlyRate]
+      ,[grossMonthlyRate]
+      ,[percentSalaryHike]
+	  
+	  ,c.[distanceFromHome]
+	  ,c.[numPreviousCompanies]
+	  ,CONVERT(nvarchar(10),c.birthday,112) as birthdate
 	  ,jobInvolvement
 	  ,jobLevel
 	  ,performanceRating
@@ -385,6 +485,14 @@
 	  ,jobSatisfaction
 	  ,relationshipSatisfaction
 	  ,worklifeBalance
+	  ,trainingTimesLY
+	  ,totalWorkingYears
+	  ,yearsAtCompany
+	  ,yearsCurrentRole
+	  ,yearsSinceLastPromotion
+	  ,yearsCurrManager
+	  ,CONVERT(nvarchar(10),recrutmentDate,112) as recrutmentDate
+	  ,CONVERT(nvarchar(10),exitDate,112) as exitDate
   FROM [dbo].[Salary]  a
   left join [DW_HR].[dbo].DIM_EmployeeInfo b on  a.fullName = b.fullName
   left join [dbo].[Employee] c on b.id = c.id
@@ -393,7 +501,8 @@
   left join [DW_HR].[dbo].DIM_jobRole f on c.jobRoleID =f.id 
   left join [DW_HR].[dbo].DIM_Situation s on a.empID =  s.empID
   left join dbo.PerformanceSurvey ps on a.empID = ps.empID
-  left join dbo.SatisfactionSurvey ss on ss.empID = a.empID</property>
+  left join dbo.SatisfactionSurvey ss on ss.empID = a.empID
+  left join dbo.SituationSurvey ssu on ssu.empID = a.empID</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -418,7 +527,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
+                  refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.STAGING_HR]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.STAGING_HR]"
                   description="The OLE DB runtime connection used to access the database."
@@ -426,374 +535,526 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[netHourlyRate]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[netHourlyRate]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[netHourlyRate]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[netHourlyRate]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[netHourlyRate]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[netHourlyRate]"
                       name="netHourlyRate"
                       precision="18"
                       scale="3"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[grossMonthlyRate]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[grossMonthlyRate]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[grossMonthlyRate]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[grossMonthlyRate]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[grossMonthlyRate]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[grossMonthlyRate]"
                       name="grossMonthlyRate"
                       precision="18"
                       scale="3"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[percentSalaryHike]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[percentSalaryHike]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[percentSalaryHike]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[percentSalaryHike]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[percentSalaryHike]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[percentSalaryHike]"
                       name="percentSalaryHike"
                       precision="18"
                       scale="3"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_department]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_department]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_department]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_department]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_department]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_department]"
                       name="pk_department"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_education]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_education]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_education]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_education]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_education]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_education]"
                       name="pk_education"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_employeeinfo]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_employeeinfo]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_employeeinfo]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_employeeinfo]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_employeeinfo]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_employeeinfo]"
                       name="pk_employeeinfo"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_jobrole]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_jobrole]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_jobrole]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_jobrole]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_jobrole]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_jobrole]"
                       name="pk_jobrole"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_situation]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[distanceFromHome]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_situation]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_situation]"
-                      name="pk_situation"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[distanceFromHome]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[distanceFromHome]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[distanceFromHome]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[distanceFromHome]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[distanceFromHome]"
                       name="distanceFromHome"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[numPreviousCompanies]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[numPreviousCompanies]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[numPreviousCompanies]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[numPreviousCompanies]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[numPreviousCompanies]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[numPreviousCompanies]"
                       name="numPreviousCompanies"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[birthdate]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[birthdate]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[birthdate]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[birthdate]"
                       length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[birthdate]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[birthdate]"
                       name="birthdate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobInvolvement]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobInvolvement]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobInvolvement]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobInvolvement]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobInvolvement]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobInvolvement]"
                       name="jobInvolvement"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobLevel]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobLevel]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobLevel]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobLevel]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobLevel]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobLevel]"
                       name="jobLevel"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[performanceRating]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[performanceRating]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[performanceRating]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[performanceRating]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[performanceRating]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[performanceRating]"
                       name="performanceRating"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[environmentSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[environmentSatisfaction]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[environmentSatisfaction]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[environmentSatisfaction]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[environmentSatisfaction]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[environmentSatisfaction]"
                       name="environmentSatisfaction"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobSatisfaction]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobSatisfaction]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobSatisfaction]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobSatisfaction]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobSatisfaction]"
                       name="jobSatisfaction"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[relationshipSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[relationshipSatisfaction]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[relationshipSatisfaction]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[relationshipSatisfaction]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[relationshipSatisfaction]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[relationshipSatisfaction]"
                       name="relationshipSatisfaction"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[worklifeBalance]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[worklifeBalance]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[worklifeBalance]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[worklifeBalance]"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[worklifeBalance]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[worklifeBalance]"
                       name="worklifeBalance"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[trainingTimesLY]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[trainingTimesLY]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[trainingTimesLY]"
+                      name="trainingTimesLY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[totalWorkingYears]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[totalWorkingYears]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[totalWorkingYears]"
+                      name="totalWorkingYears"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[yearsAtCompany]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[yearsAtCompany]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[yearsAtCompany]"
+                      name="yearsAtCompany"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[yearsCurrentRole]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[yearsCurrentRole]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[yearsCurrentRole]"
+                      name="yearsCurrentRole"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[yearsSinceLastPromotion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[yearsSinceLastPromotion]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[yearsSinceLastPromotion]"
+                      name="yearsSinceLastPromotion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[yearsCurrManager]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[yearsCurrManager]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[yearsCurrManager]"
+                      name="yearsCurrManager"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[recrutmentDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[recrutmentDate]"
+                      length="10"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[recrutmentDate]"
+                      name="recrutmentDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[exitDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[exitDate]"
+                      length="10"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[exitDate]"
+                      name="exitDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_situation]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_situation]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk_situation]"
+                      name="pk_situation"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[netHourlyRate]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[netHourlyRate]"
                       dataType="numeric"
                       name="netHourlyRate"
                       precision="18"
                       scale="3" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[grossMonthlyRate]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[grossMonthlyRate]"
                       dataType="numeric"
                       name="grossMonthlyRate"
                       precision="18"
                       scale="3" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[percentSalaryHike]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[percentSalaryHike]"
                       dataType="numeric"
                       name="percentSalaryHike"
                       precision="18"
                       scale="3" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_department]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_department]"
                       dataType="i4"
                       name="pk_department" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_education]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_education]"
                       dataType="i4"
                       name="pk_education" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_employeeinfo]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_employeeinfo]"
                       dataType="i4"
                       name="pk_employeeinfo" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_jobrole]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_jobrole]"
                       dataType="i4"
                       name="pk_jobrole" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_situation]"
-                      dataType="i4"
-                      name="pk_situation" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[distanceFromHome]"
-                      dataType="i4"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[distanceFromHome]"
+                      dataType="wstr"
+                      length="10"
                       name="distanceFromHome" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[numPreviousCompanies]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[numPreviousCompanies]"
                       dataType="i4"
                       name="numPreviousCompanies" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[birthdate]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[birthdate]"
                       dataType="wstr"
                       length="10"
                       name="birthdate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobInvolvement]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobInvolvement]"
                       dataType="i4"
                       name="jobInvolvement" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobLevel]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobLevel]"
                       dataType="i4"
                       name="jobLevel" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[performanceRating]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[performanceRating]"
                       dataType="i4"
                       name="performanceRating" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[environmentSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[environmentSatisfaction]"
                       dataType="i4"
                       name="environmentSatisfaction" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobSatisfaction]"
                       dataType="i4"
                       name="jobSatisfaction" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[relationshipSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[relationshipSatisfaction]"
                       dataType="i4"
                       name="relationshipSatisfaction" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[worklifeBalance]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[worklifeBalance]"
                       dataType="i4"
                       name="worklifeBalance" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[trainingTimesLY]"
+                      dataType="i4"
+                      name="trainingTimesLY" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[totalWorkingYears]"
+                      dataType="i4"
+                      name="totalWorkingYears" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[yearsAtCompany]"
+                      dataType="i4"
+                      name="yearsAtCompany" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[yearsCurrentRole]"
+                      dataType="i4"
+                      name="yearsCurrentRole" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[yearsSinceLastPromotion]"
+                      dataType="i4"
+                      name="yearsSinceLastPromotion" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[yearsCurrManager]"
+                      dataType="i4"
+                      name="yearsCurrManager" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[recrutmentDate]"
+                      dataType="wstr"
+                      length="10"
+                      name="recrutmentDate" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[exitDate]"
+                      dataType="wstr"
+                      length="10"
+                      name="exitDate" />
+                    <externalMetadataColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk_situation]"
+                      dataType="i4"
+                      name="pk_situation" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[netHourlyRate]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[netHourlyRate]"
                       dataType="numeric"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[netHourlyRate]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[netHourlyRate]"
                       name="netHourlyRate"
                       precision="18"
                       scale="3" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[grossMonthlyRate]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[grossMonthlyRate]"
                       dataType="numeric"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[grossMonthlyRate]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[grossMonthlyRate]"
                       name="grossMonthlyRate"
                       precision="18"
                       scale="3" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[percentSalaryHike]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[percentSalaryHike]"
                       dataType="numeric"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[percentSalaryHike]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[percentSalaryHike]"
                       name="percentSalaryHike"
                       precision="18"
                       scale="3" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_department]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_department]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_department]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_department]"
                       name="pk_department" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_education]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_situation]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_education]"
-                      name="pk_education" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_employeeinfo]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_employeeinfo]"
-                      name="pk_employeeinfo" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_jobrole]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_jobrole]"
-                      name="pk_jobrole" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_situation]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_situation]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_situation]"
                       name="pk_situation" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[distanceFromHome]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_education]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[distanceFromHome]"
-                      name="distanceFromHome" />
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_education]"
+                      name="pk_education" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[numPreviousCompanies]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_employeeinfo]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[numPreviousCompanies]"
-                      name="numPreviousCompanies" />
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_employeeinfo]"
+                      name="pk_employeeinfo" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[birthdate]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_jobrole]"
+                      dataType="i4"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk_jobrole]"
+                      name="pk_jobrole" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[distanceFromHome]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[birthdate]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[distanceFromHome]"
+                      name="distanceFromHome" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[numPreviousCompanies]"
+                      dataType="i4"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[numPreviousCompanies]"
+                      name="numPreviousCompanies" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[birthdate]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[birthdate]"
                       name="birthdate" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobInvolvement]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobInvolvement]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobInvolvement]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobInvolvement]"
                       name="jobInvolvement" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobLevel]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobLevel]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobLevel]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobLevel]"
                       name="jobLevel" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[performanceRating]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[performanceRating]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[performanceRating]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[performanceRating]"
                       name="performanceRating" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[environmentSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[environmentSatisfaction]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[environmentSatisfaction]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[environmentSatisfaction]"
                       name="environmentSatisfaction" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobSatisfaction]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobSatisfaction]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobSatisfaction]"
                       name="jobSatisfaction" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[relationshipSatisfaction]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[relationshipSatisfaction]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[relationshipSatisfaction]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[relationshipSatisfaction]"
                       name="relationshipSatisfaction" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[worklifeBalance]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[worklifeBalance]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[worklifeBalance]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[worklifeBalance]"
                       name="worklifeBalance" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[trainingTimesLY]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[trainingTimesLY]"
+                      name="trainingTimesLY" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[totalWorkingYears]"
+                      dataType="i4"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[totalWorkingYears]"
+                      name="totalWorkingYears" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[yearsAtCompany]"
+                      dataType="i4"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[yearsAtCompany]"
+                      name="yearsAtCompany" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[yearsCurrentRole]"
+                      dataType="i4"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[yearsCurrentRole]"
+                      name="yearsCurrentRole" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[yearsSinceLastPromotion]"
+                      dataType="i4"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[yearsSinceLastPromotion]"
+                      name="yearsSinceLastPromotion" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[yearsCurrManager]"
+                      dataType="i4"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[yearsCurrManager]"
+                      name="yearsCurrManager" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[recrutmentDate]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[recrutmentDate]"
+                      name="recrutmentDate" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[exitDate]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[exitDate]"
+                      name="exitDate" />
+                    <outputColumn
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -804,10 +1065,10 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\LOAD FACT_EMPLOYEE.Paths[OLE DB Source Output]"
+              endId="Package\LOAD FACT_EMPLOYEE\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\LOAD FACT_EMPLOYEE\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -826,27 +1087,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="152,42.6666666666667"
-          Id="Package\Data Flow Task"
+          Size="190.666666666667,42.6666666666667"
+          Id="Package\LOAD FACT_EMPLOYEE"
           TopLeft="200.624997010455,88.3999984192848" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\LOAD FACT_EMPLOYEE">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151.333333333334,42.6666666666667"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="191.87499714084,42.2499992445111" />
-        <NodeLayout
           Size="172,42.6666666666667"
-          Id="Package\Data Flow Task\OLE DB Destination"
+          Id="Package\LOAD FACT_EMPLOYEE\OLE DB Destination"
           TopLeft="177.499997355044,159.133331334194" />
+        <NodeLayout
+          Size="151.333333333334,42.6666666666667"
+          Id="Package\LOAD FACT_EMPLOYEE\OLE DB Source"
+          TopLeft="191.87499714084,42.2499992445111" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          Id="Package\LOAD FACT_EMPLOYEE.Paths[OLE DB Source Output]"
           TopLeft="265.520830581275,84.9166659111778">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -871,15 +1132,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\LOAD FACT_EMPLOYEE\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -888,6 +1141,14 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\LOAD FACT_EMPLOYEE\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
